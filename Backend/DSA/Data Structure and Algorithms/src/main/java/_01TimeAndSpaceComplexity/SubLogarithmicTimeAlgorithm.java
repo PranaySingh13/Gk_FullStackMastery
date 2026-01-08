@@ -15,7 +15,7 @@ public class SubLogarithmicTimeAlgorithm {
     }
 
     /*
-    Time Complexity: O(log log n)
+    Time Complexity: O(log log n) which is nearly equal to O(1)
     Space Complexity: O(1)
     */
 }
