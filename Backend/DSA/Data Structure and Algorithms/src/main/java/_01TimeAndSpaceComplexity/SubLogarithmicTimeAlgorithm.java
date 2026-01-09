@@ -13,4 +13,9 @@ public class SubLogarithmicTimeAlgorithm {
     public static void main(String[] args) {
         countIterations(1_000_000_000, 2); //Total loop runs: 5
     }
+
+    /*
+    Time Complexity: O(log log n) which is nearly equal to O(1)
+    Space Complexity: O(1)
+    */
 }
