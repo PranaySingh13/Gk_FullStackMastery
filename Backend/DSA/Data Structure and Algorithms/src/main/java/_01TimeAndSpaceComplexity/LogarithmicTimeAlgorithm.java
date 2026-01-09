@@ -2,6 +2,19 @@ package main.java._01TimeAndSpaceComplexity;
 
 public class LogarithmicTimeAlgorithm {
 
+    public static void iterationCount(int n, int c) {
+        int iterations = 0;
+        for (int i = 1; i < n; i = i * c) {
+            iterations++;
+        }
+        System.out.println("Total Loop 1 runs: " + iterations);
+        iterations = 0;
+        for (int i = n; i > 1; i = i / c) {
+            iterations++;
+        }
+        System.out.println("Total Loop 2 runs: " + iterations);
+    }
+
     public static int binarySearch(int[] arr, int targetValue) {
         int lowestIndex = 0;
         int higheshIndex = arr.length - 1;
@@ -23,13 +36,8 @@ public class LogarithmicTimeAlgorithm {
     }
 
     public static void main(String[] args) {
-        int[] arr = {10, 20, 30, 40, 50, 60};
-        System.out.println(binarySearch(arr, 20));
-
-        /*
-        Found in 3 iterations
-        20
-        */
+        iterationCount(33, 2); // Loop1 & Loop2 runs 6 & 5 times resp.
+        iterationCount(81, 3); // Loop1 & Loop2 runs 4 & 4 times resp.
 
         int[] arr1 = new int[1024];
         for (int i = 0; i < arr1.length; i++)
@@ -43,9 +51,9 @@ public class LogarithmicTimeAlgorithm {
         */
     }
 
-    /*
-    An algorithm runs in O(log n) time when the problem size reduces by a constant factor (usually ½) at each step.
-    you keep skipping half of them every time.
-    */
+        /*
+        An algorithm runs in O(log n) time when the problem size reduces by a constant factor (usually ½) at each step.
+        you keep skipping half of them every time.
+        */
 
 }
